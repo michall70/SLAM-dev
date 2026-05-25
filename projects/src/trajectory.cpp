@@ -36,7 +36,7 @@ static void saveMatchImage(const cv::Mat &img1, const cv::Mat &img2,
 }
 
 int main() {
-    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/vertical/04o_v.bag";
+    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/parallel/03z_p.bag";
 
     auto playback = std::make_shared<ob::PlaybackDevice>(filePath);
     auto pipe     = std::make_shared<ob::Pipeline>(playback);
@@ -186,10 +186,11 @@ int main() {
         }
 
         // ─── Accumulate ─────────────────────────────────────────────────────
+        // recoverPose returns R_rel,t_rel such that X_prev = R_rel * X_cur + t_rel.
+        // Solving for current pose: R_cur = R_rel^T * R_prev, t_cur = R_rel^T * t_prev - R_rel^T * t_rel
         cv::Mat R_rel_t = R_rel.t();
-        cv::Mat t_new   = t_accum - R_accum * R_rel_t * t_rel;
-        R_accum         = R_accum * R_rel_t;
-        t_accum         = t_new.clone();
+        R_accum         = R_rel_t * R_accum;
+        t_accum         = R_rel_t * t_accum - R_rel_t * t_rel;
 
         cv::Mat C = -R_accum.t() * t_accum;
         traj.push_back(cv::Point3f(C.at<double>(0), C.at<double>(1), C.at<double>(2)));
