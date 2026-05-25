@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ob_enumerate.dir/enumerate.cpp.o -o ob_enumerate  -lob:: -lob::examples::utils 

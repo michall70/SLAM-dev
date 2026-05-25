@@ -1,0 +1,7 @@
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/ob_enumerate.dir
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/edit_cache.dir
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/rebuild_cache.dir
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/list_install_components.dir
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/install.dir
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/install/local.dir
+/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/examples/src/0.basic.enumerate/build/CMakeFiles/install/strip.dir

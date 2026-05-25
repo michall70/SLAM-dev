@@ -1,0 +1,9 @@
+[05/08 22:24:51.229233][info][22072][LinuxUsbPal.cpp:334] Create PollingDeviceWatcher!
+[05/08 22:24:51.229279][info][22072][DeviceManager.cpp:25] Current found device(s): (0)
+[05/08 22:24:51.229282][info][22072][DeviceManager.cpp:405] Enable net device enumeration: true
+[05/08 22:24:52.238489][info][22072][DeviceManager.cpp:25] Current device(s) list: (0)
+[05/08 22:24:52.238530][warning][22072][ObException.cpp:32] A unrecoverable_exception has occurred!
+ - where: Pipeline.cpp(22)
+ - msg: No device found
+ - type: CAMERA_DISCONNECTED
+ - status: 112
