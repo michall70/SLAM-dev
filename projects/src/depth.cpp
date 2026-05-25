@@ -9,7 +9,7 @@ namespace fs = std::filesystem;
 
 int main() {
     
-    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/testproject/data/1280_800_30fps.bag";
+    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/1280_800_30fps.bag";
     // Camera parameters (from user: Orbbec Gemini 336L)
     const double BASELINE_MM = 95.0;
     const double FX_PX       = 620.0;
@@ -38,7 +38,7 @@ int main() {
 
         pipe->start(config);
 
-        fs::create_directories("./depth_output");
+        fs::create_directories("./output/depth");
 
         int frameIndex  = 0;
         int saveIndex   = 0;
@@ -129,12 +129,12 @@ int main() {
                 cv::bitwise_not(depthNorm, depthNorm);  // Invert for better visualization (closer = brighter)
                 cv::Mat depthColor;
                 cv::applyColorMap(depthNorm, depthColor, cv::COLORMAP_JET);
-                std::string vizPath = "./depth_output/" + std::to_string(saveIndex) + "_depth_viz.png";
+                std::string vizPath = "./output/depth/" + std::to_string(saveIndex) + "_depth_viz.png";
                 cv::imwrite(vizPath, depthColor);
 
                 // origin image
-                std::string leftPath  = "./depth_output/" + std::to_string(saveIndex) + "_origin_left.png";
-                std::string rightPath = "./depth_output/" + std::to_string(saveIndex) + "_origin_right.png";
+                std::string leftPath  = "./output/depth/" + std::to_string(saveIndex) + "_origin_left.png";
+                std::string rightPath = "./output/depth/" + std::to_string(saveIndex) + "_origin_right.png";
                 cv::imwrite(leftPath, leftImg);
                 cv::imwrite(rightPath, rightImg);
 

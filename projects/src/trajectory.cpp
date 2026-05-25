@@ -36,7 +36,7 @@ static void saveMatchImage(const cv::Mat &img1, const cv::Mat &img2,
 }
 
 int main() {
-    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/testproject/data/vertical/05o_v.bag";
+    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/vertical/04o_v.bag";
 
     auto playback = std::make_shared<ob::PlaybackDevice>(filePath);
     auto pipe     = std::make_shared<ob::Pipeline>(playback);
@@ -101,7 +101,7 @@ int main() {
     int frameIndex  = 0;
     int validMotion = 0;
 
-    fs::create_directories("./traj_output");
+    fs::create_directories("./output/traj_output");
 
     // Main loop
     while (!playbackStop) {
@@ -210,7 +210,7 @@ int main() {
         if (frameIndex % 1 == 0 && !goodMatches.empty()) {
             char buf[32];
             snprintf(buf, sizeof(buf), "%04d", frameIndex);
-            std::string mPath = "./traj_output/match_" + std::string(buf) + ".png";
+            std::string mPath = "./output/traj_output/match_" + std::string(buf) + ".png";
             saveMatchImage(leftImg, prevImg, kp, prevKp, goodMatches, mPath);
         }
 
@@ -226,7 +226,7 @@ int main() {
               << validMotion << " motion estimates." << std::endl;
 
     // ─── Save trajectory data for 3D viewer ─────────────────────────────────
-    std::ofstream dataFile("./traj_output/trajectory.txt");
+    std::ofstream dataFile("./output/traj_output/trajectory.txt");
     dataFile << "# frame tx ty tz r00 r01 r02 r10 r11 r12 r20 r21 r22\n";
     for (size_t i = 0; i < traj.size(); i++) {
         auto &R = trajR[i];
@@ -236,7 +236,7 @@ int main() {
                  << R(1, 0) << " " << R(1, 1) << " " << R(1, 2) << " "
                  << R(2, 0) << " " << R(2, 1) << " " << R(2, 2) << "\n";
     }
-    std::cout << "Saved trajectory data to ./traj_output/trajectory.txt" << std::endl;
+    std::cout << "Saved trajectory data to ./output/traj_output/trajectory.txt" << std::endl;
 
     // ─── Draw 2D trajectory with orientation markers ────────────────────────
     if (traj.size() < 2) {
@@ -315,8 +315,8 @@ int main() {
     cv::putText(trajImg, "Arrows = camera viewing direction",
                 cv::Point(10, 25), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(50, 50, 50), 1);
 
-    cv::imwrite("./traj_output/trajectory.png", trajImg);
-    std::cout << "Saved 2D trajectory to ./traj_output/trajectory.png" << std::endl;
+    cv::imwrite("./output/traj_output/trajectory.png", trajImg);
+    std::cout << "Saved 2D trajectory to ./output/traj_output/trajectory.png" << std::endl;
 
     return 0;
 }

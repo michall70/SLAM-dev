@@ -89,7 +89,7 @@ static void drawCameraAxes(const Eigen::Vector3d &pos, const Eigen::Matrix3d &R_
 }
 
 int main(int argc, char **argv) {
-    std::string dataPath = "./traj_output/trajectory.txt";
+    std::string dataPath = "./output/traj_output/trajectory.txt";
     if (argc > 1) dataPath = argv[1];
 
     auto poses = loadTrajectory(dataPath);
@@ -224,7 +224,7 @@ int main(int argc, char **argv) {
 
         if (pangolin::Pushed(saveImg)) {
             char buf[64];
-            snprintf(buf, sizeof(buf), "./traj_output/snapshot_%04d.png", saveCount++);
+            snprintf(buf, sizeof(buf), "./output/traj_output/snapshot_%04d.png", saveCount++);
             pangolin::SaveWindowOnRender(buf);
         }
     }

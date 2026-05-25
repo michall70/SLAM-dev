@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include -isystem /usr/local/include/opencv4
 
 CXX_FLAGS = -std=gnu++17
 

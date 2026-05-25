@@ -9,7 +9,7 @@
 namespace fs = std::filesystem;
 
 int main() {
-    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/testproject/data/IR02.bag";
+    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/IR02.bag";
 
     auto playback = std::make_shared<ob::PlaybackDevice>(filePath);
     auto pipe     = std::make_shared<ob::Pipeline>(playback);
@@ -25,7 +25,7 @@ int main() {
         config->enableStream(sensorList->getSensorType(i));
     }
 
-    fs::create_directories("./orb_output");
+    fs::create_directories("./output/orb");
 
     // ─── ORB detector ──────────────────────────────────────────────────────
     // cv::ORB::create(nfeatures, scaleFactor, nlevels, edgeThreshold,
@@ -110,10 +110,10 @@ int main() {
         char buf[32];
         snprintf(buf, sizeof(buf), "%04d", saveIndex);
 
-        std::string rawPath = "./orb_output/" + std::string(buf) + ".png";
+        std::string rawPath = "./output/orb/" + std::string(buf) + ".png";
         cv::imwrite(rawPath, leftImg);
 
-        std::string orbPath = "./orb_output/" + std::string(buf) + "_orb.png";
+        std::string orbPath = "./output/orb/" + std::string(buf) + "_orb.png";
         cv::imwrite(orbPath, orbImg);
 
         std::cout << buf << ": " << keypoints.size()

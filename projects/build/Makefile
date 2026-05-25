@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/michall/AAAProjects/RGBD/projects/testproject
+CMAKE_SOURCE_DIR = /home/michall/AAAProjects/RGBD/projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/michall/AAAProjects/RGBD/projects/testproject/build
+CMAKE_BINARY_DIR = /home/michall/AAAProjects/RGBD/projects/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles /home/michall/AAAProjects/RGBD/projects/testproject/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles /home/michall/AAAProjects/RGBD/projects/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OrbExtractor
-
-# Build rule for target.
-OrbExtractor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OrbExtractor
-.PHONY : OrbExtractor
-
-# fast build rule for target.
-OrbExtractor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/build
-.PHONY : OrbExtractor/fast
-
-#=============================================================================
 # Target rules for targets named TrajectoryCalculator
 
 # Build rule for target.
@@ -154,30 +141,6 @@ TrajectoryViewer: cmake_check_build_system
 TrajectoryViewer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/build
 .PHONY : TrajectoryViewer/fast
-
-src/ORB.o: src/ORB.cpp.o
-.PHONY : src/ORB.o
-
-# target to build an object file
-src/ORB.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/src/ORB.cpp.o
-.PHONY : src/ORB.cpp.o
-
-src/ORB.i: src/ORB.cpp.i
-.PHONY : src/ORB.i
-
-# target to preprocess a source file
-src/ORB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/src/ORB.cpp.i
-.PHONY : src/ORB.cpp.i
-
-src/ORB.s: src/ORB.cpp.s
-.PHONY : src/ORB.s
-
-# target to generate assembly for a file
-src/ORB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/src/ORB.cpp.s
-.PHONY : src/ORB.cpp.s
 
 src/plotTrajectory.o: src/plotTrajectory.cpp.o
 .PHONY : src/plotTrajectory.o
@@ -235,12 +198,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OrbExtractor"
 	@echo "... TrajectoryCalculator"
 	@echo "... TrajectoryViewer"
-	@echo "... src/ORB.o"
-	@echo "... src/ORB.i"
-	@echo "... src/ORB.s"
 	@echo "... src/plotTrajectory.o"
 	@echo "... src/plotTrajectory.i"
 	@echo "... src/plotTrajectory.s"

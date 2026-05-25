@@ -1,5 +1,5 @@
 CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o: \
- /home/michall/AAAProjects/RGBD/projects/testproject/src/plotTrajectory.cpp \
+ /home/michall/AAAProjects/RGBD/projects/src/plotTrajectory.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

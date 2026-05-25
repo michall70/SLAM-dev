@@ -4,7 +4,7 @@
 int main() {
     try {
         // Get valid .bag
-        std::string   filePath = "/home/michall/AAAProjects/RGBD/projects/testproject/data/IR01.bag";
+        std::string   filePath = "/home/michall/AAAProjects/RGBD/projects/data/IR01.bag";
 
         // 1.Create a playback device with a Rosbag file
         std::shared_ptr<ob::PlaybackDevice> playback = std::make_shared<ob::PlaybackDevice>(filePath);

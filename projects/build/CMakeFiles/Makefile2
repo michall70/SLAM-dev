@@ -54,16 +54,15 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/michall/AAAProjects/RGBD/projects/testproject
+CMAKE_SOURCE_DIR = /home/michall/AAAProjects/RGBD/projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/michall/AAAProjects/RGBD/projects/testproject/build
+CMAKE_BINARY_DIR = /home/michall/AAAProjects/RGBD/projects/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/OrbExtractor.dir/all
 all: CMakeFiles/TrajectoryCalculator.dir/all
 all: CMakeFiles/TrajectoryViewer.dir/all
 .PHONY : all
@@ -73,36 +72,9 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/OrbExtractor.dir/clean
 clean: CMakeFiles/TrajectoryCalculator.dir/clean
 clean: CMakeFiles/TrajectoryViewer.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/OrbExtractor.dir
-
-# All Build rule for target.
-CMakeFiles/OrbExtractor.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles --progress-num=1,2 "Built target OrbExtractor"
-.PHONY : CMakeFiles/OrbExtractor.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/OrbExtractor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OrbExtractor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 0
-.PHONY : CMakeFiles/OrbExtractor.dir/rule
-
-# Convenience name for target.
-OrbExtractor: CMakeFiles/OrbExtractor.dir/rule
-.PHONY : OrbExtractor
-
-# clean rule for target.
-CMakeFiles/OrbExtractor.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/clean
-.PHONY : CMakeFiles/OrbExtractor.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TrajectoryCalculator.dir
@@ -111,14 +83,14 @@ CMakeFiles/OrbExtractor.dir/clean:
 CMakeFiles/TrajectoryCalculator.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryCalculator.dir/build.make CMakeFiles/TrajectoryCalculator.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryCalculator.dir/build.make CMakeFiles/TrajectoryCalculator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles --progress-num=3,4 "Built target TrajectoryCalculator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles --progress-num=1,2 "Built target TrajectoryCalculator"
 .PHONY : CMakeFiles/TrajectoryCalculator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TrajectoryCalculator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TrajectoryCalculator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 0
 .PHONY : CMakeFiles/TrajectoryCalculator.dir/rule
 
 # Convenience name for target.
@@ -137,14 +109,14 @@ CMakeFiles/TrajectoryCalculator.dir/clean:
 CMakeFiles/TrajectoryViewer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles --progress-num=5,6 "Built target TrajectoryViewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles --progress-num=3,4 "Built target TrajectoryViewer"
 .PHONY : CMakeFiles/TrajectoryViewer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TrajectoryViewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TrajectoryViewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/testproject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 0
 .PHONY : CMakeFiles/TrajectoryViewer.dir/rule
 
 # Convenience name for target.

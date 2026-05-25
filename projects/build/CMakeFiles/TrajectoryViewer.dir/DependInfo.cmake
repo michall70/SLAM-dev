@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/michall/AAAProjects/RGBD/projects/testproject/src/plotTrajectory.cpp" "CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o" "gcc" "CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o.d"
+  "/home/michall/AAAProjects/RGBD/projects/src/plotTrajectory.cpp" "CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o" "gcc" "CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,5 +1,5 @@
 CMakeFiles/TrajectoryCalculator.dir/src/trajectory.cpp.o: \
- /home/michall/AAAProjects/RGBD/projects/testproject/src/trajectory.cpp \
+ /home/michall/AAAProjects/RGBD/projects/src/trajectory.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -371,37 +371,37 @@ CMakeFiles/TrajectoryCalculator.dir/src/trajectory.cpp.o: \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/ObSensor.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Context.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Context.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/ObTypes.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Export.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/ObSensor.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Context.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Context.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/ObTypes.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Export.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Types.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Error.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Error.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Device.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Property.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Device.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/MultipleDevices.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Advanced.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Advanced.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Filter.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Frame.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Frame.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/StreamProfile.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/StreamProfile.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Filter.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Types.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Error.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Error.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Device.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Property.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Device.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/MultipleDevices.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Advanced.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Advanced.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Filter.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Frame.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Frame.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/StreamProfile.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/StreamProfile.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Filter.h \
  /usr/include/c++/13/typeindex \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Sensor.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Sensor.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Sensor.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Sensor.h \
  /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/this_thread_sleep.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Pipeline.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Pipeline.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/TypeHelper.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/TypeHelper.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/RecordPlayback.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/RecordPlayback.h \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/hpp/Version.hpp \
- /home/michall/AAAProjects/RGBD/projects/testproject/lib/orbbecsdk/include/libobsensor/h/Version.h
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Pipeline.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Pipeline.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/TypeHelper.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/TypeHelper.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/RecordPlayback.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/RecordPlayback.h \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/hpp/Version.hpp \
+ /home/michall/AAAProjects/RGBD/projects/lib/orbbecsdk/include/libobsensor/h/Version.h

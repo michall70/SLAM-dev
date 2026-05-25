@@ -9,7 +9,7 @@ namespace fs = std::filesystem;
 
 int main() {
 
-    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/testproject/data/1280_800_30fps.bag";
+    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/1280_800_30fps.bag";
     std::string fileName = fs::path(filePath).stem().string();
 
     // 1. create playback device
@@ -47,8 +47,8 @@ int main() {
     pipe->start(config);
 
     // 7. create output folders
-    fs::create_directories("./pictures/" + fileName + "/left");
-    fs::create_directories("./pictures/" + fileName + "/right");
+    fs::create_directories("./output/pictures/" + fileName + "/left");
+    fs::create_directories("./output/pictures/" + fileName + "/right");
 
     int frameIndex = 0;
     int saveIndex = 0;
@@ -77,8 +77,8 @@ int main() {
             cv::Mat rightImg(height, width, CV_8UC1, (void*)rightIr->getData());
 
             // file name
-            std::string leftPath  = "./pictures/" + fileName + "/left/"  + std::to_string(saveIndex) + ".png";
-            std::string rightPath = "./pictures/" + fileName + "/right/" + std::to_string(saveIndex) + ".png";
+            std::string leftPath  = "./output/pictures/" + fileName + "/left/"  + std::to_string(saveIndex) + ".png";
+            std::string rightPath = "./output/pictures/" + fileName + "/right/" + std::to_string(saveIndex) + ".png";
 
             cv::imwrite(leftPath, leftImg);
             cv::imwrite(rightPath, rightImg);
