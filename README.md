@@ -20,6 +20,10 @@ projects/
 └── lib/orbbecsdk/      # Vendored OrbbecSDK 2.8.6
 ```
 
+## Before Build
+
+**Change `.bag` file path** in source code (in `projects/src/`)
+
 ## Build
 
 **Prerequisites:** OpenCV, Pangolin (system-installed; found via `find_package`).
@@ -49,9 +53,12 @@ Then rebuild with `bash cmake_rebuild.sh`.
 ## Data
 
 Input `.bag` files live in `projects/data/`. Hardcoded absolute paths in many `src/*.cpp` files point to specific bags — change these when moving to another machine.
+
 - `.bag` files are not included in the repository.
 
 ## Run
+
+The **compiled executables** are placed in `projects/bin/`
 
 ```bash
 cd projects
