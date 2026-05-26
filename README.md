@@ -9,12 +9,13 @@ output/             # Generated trajectory.txt, match images, etc.
 projects/
 ├── cmake_rebuild.sh    # One-click build: delete build/ → cmake → make
 ├── CMakeLists.txt      # Build config — uncomment targets to activate
+├── bin/                # Compiled executables (auto-created by cmake)
 ├── src/                # Source files (*.cpp)
-│   ├── trajectory.cpp      # VO: ORB → essential matrix → trajectory (active)
-│   ├── plotTrajectory.cpp  # Pangolin 3D viewer (currently disabled)
-│   ├── extract.cpp         # Extract IR frames as PNG (disabled)
-│   ├── depth.cpp           # Stereo depth via SGBM (disabled)
-│   ├── ORB.cpp             # ORB feature extraction demo (disabled)
+│   ├── trajectory.cpp      # VO: ORB → essential matrix → trajectory
+│   ├── plotTrajectory.cpp  # Pangolin 3D viewer
+│   ├── extract.cpp         # Extract IR frames as PNG
+│   ├── depth.cpp           # Stereo depth via SGBM
+│   ├── ORB.cpp             # ORB feature extraction demo
 │   └── template.cpp        # Minimal Orbbec playback skeleton (always disabled)
 └── lib/orbbecsdk/      # Vendored OrbbecSDK 2.8.6
 ```
@@ -30,7 +31,7 @@ bash cmake_rebuild.sh
 
 This deletes the `build/` directory, runs cmake, and compiles with `make -j$(nproc)`.
 
-Output binaries appear in `projects/build/`.
+Output binaries appear in `projects/bin/`.
 
 ## Activating Other Source Files
 
@@ -52,6 +53,6 @@ Input `.bag` files live in `projects/data/`. Hardcoded absolute paths in many `s
 ## Run
 
 ```bash
-cd projects/build
-./TrajectoryCalculator        # computes trajectory.txt and saves to output/traj_output/
+cd projects
+./bin/TrajectoryCalculator    # computes trajectory.txt and saves to output/traj_output/
 ```

@@ -3,6 +3,7 @@
 ## Build & Run
 
 - **Build:** `bash projects/cmake_rebuild.sh` (deletes `build/`, runs cmake + make), or `cd projects/build && cmake .. && make -j$(nproc)`
+- **Binaries go to** `projects/bin/` (set via `CMAKE_RUNTIME_OUTPUT_DIRECTORY`)
 - **Only two targets are built** (others commented out in `projects/CMakeLists.txt`):
   - `TrajectoryCalculator` ← `projects/src/trajectory.cpp` (VO pipeline: ORB → essential matrix → trajectory)
   - `TrajectoryViewer` ← `projects/src/plotTrajectory.cpp` (Pangolin 3D viewer)
