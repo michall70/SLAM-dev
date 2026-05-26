@@ -35,9 +35,9 @@ add_executable(TrajectoryCalculator src/trajectory.cpp)
 target_link_libraries(TrajectoryCalculator OrbbecSDK)
 target_link_libraries(TrajectoryCalculator ${OpenCV_LIBS})
 
-add_executable(TrajectoryViewer src/plotTrajectory.cpp)
-target_link_libraries(TrajectoryViewer
-    pango_display
-    pango_scene
-)  
-target_link_libraries(TrajectoryViewer ${OpenCV_LIBS})
+# add_executable(TrajectoryViewer src/plotTrajectory.cpp)
+# target_link_libraries(TrajectoryViewer
+#     pango_display
+#     pango_scene
+# )  
+# target_link_libraries(TrajectoryViewer ${OpenCV_LIBS})

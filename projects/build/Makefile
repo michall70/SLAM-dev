@@ -129,43 +129,6 @@ TrajectoryCalculator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryCalculator.dir/build.make CMakeFiles/TrajectoryCalculator.dir/build
 .PHONY : TrajectoryCalculator/fast
 
-#=============================================================================
-# Target rules for targets named TrajectoryViewer
-
-# Build rule for target.
-TrajectoryViewer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TrajectoryViewer
-.PHONY : TrajectoryViewer
-
-# fast build rule for target.
-TrajectoryViewer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/build
-.PHONY : TrajectoryViewer/fast
-
-src/plotTrajectory.o: src/plotTrajectory.cpp.o
-.PHONY : src/plotTrajectory.o
-
-# target to build an object file
-src/plotTrajectory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o
-.PHONY : src/plotTrajectory.cpp.o
-
-src/plotTrajectory.i: src/plotTrajectory.cpp.i
-.PHONY : src/plotTrajectory.i
-
-# target to preprocess a source file
-src/plotTrajectory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.i
-.PHONY : src/plotTrajectory.cpp.i
-
-src/plotTrajectory.s: src/plotTrajectory.cpp.s
-.PHONY : src/plotTrajectory.s
-
-# target to generate assembly for a file
-src/plotTrajectory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.s
-.PHONY : src/plotTrajectory.cpp.s
-
 src/trajectory.o: src/trajectory.cpp.o
 .PHONY : src/trajectory.o
 
@@ -199,10 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TrajectoryCalculator"
-	@echo "... TrajectoryViewer"
-	@echo "... src/plotTrajectory.o"
-	@echo "... src/plotTrajectory.i"
-	@echo "... src/plotTrajectory.s"
 	@echo "... src/trajectory.o"
 	@echo "... src/trajectory.i"
 	@echo "... src/trajectory.s"

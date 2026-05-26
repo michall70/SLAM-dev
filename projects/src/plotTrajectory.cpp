@@ -89,7 +89,7 @@ static void drawCameraAxes(const Eigen::Vector3d &pos, const Eigen::Matrix3d &R_
 }
 
 int main(int argc, char **argv) {
-    std::string dataPath = "./output/traj_output/trajectory.txt";
+    std::string dataPath = "./output/trajectory.txt";
     if (argc > 1) dataPath = argv[1];
 
     auto poses = loadTrajectory(dataPath);

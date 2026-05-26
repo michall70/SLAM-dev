@@ -36,7 +36,8 @@ static void saveMatchImage(const cv::Mat &img1, const cv::Mat &img2,
 }
 
 int main() {
-    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/parallel/03z_p.bag";
+    std::string filePath = "/home/michall/AAAProjects/RGBD/projects/data/parallel/04o_p.bag";
+    std::string fileName = fs::path(filePath).stem().string();
 
     auto playback = std::make_shared<ob::PlaybackDevice>(filePath);
     auto pipe     = std::make_shared<ob::Pipeline>(playback);
@@ -101,13 +102,14 @@ int main() {
     int frameIndex  = 0;
     int validMotion = 0;
 
-    fs::create_directories("./output/traj_output");
+    fs::remove_all("./output/2D-2D_results/" + fileName + "/matches");
+    fs::create_directories("./output/2D-2D_results/" + fileName + "/matches");
 
     // Main loop
     while (!playbackStop) {
         auto frameSet = pipe->waitForFrames(1000);
         if (frameSet == nullptr) continue;
-        if (frameIndex % 2 != 0) {  // Process every 2nd frame to reduce load
+        if (frameIndex % 4 != 0) {  // Process every 4th frame to reduce load
             frameIndex++;
             continue;
         }
@@ -207,11 +209,11 @@ int main() {
                       << C.at<double>(2) << ")" << std::endl;
         }
 
-        // ─── Save match visualization every 40 frames ───────────────────────
+        // ─── Save match visualization every valid frames ───────────────────────
         if (frameIndex % 1 == 0 && !goodMatches.empty()) {
             char buf[32];
             snprintf(buf, sizeof(buf), "%04d", frameIndex);
-            std::string mPath = "./output/traj_output/match_" + std::string(buf) + ".png";
+            std::string mPath = "./output/2D-2D_results/" + fileName + "/matches/match_" + std::string(buf) + ".png";
             saveMatchImage(leftImg, prevImg, kp, prevKp, goodMatches, mPath);
         }
 
@@ -227,7 +229,7 @@ int main() {
               << validMotion << " motion estimates." << std::endl;
 
     // ─── Save trajectory data for 3D viewer ─────────────────────────────────
-    std::ofstream dataFile("./output/traj_output/trajectory.txt");
+    std::ofstream dataFile("./output/2D-2D_results/" + fileName + "/trajectory.txt");
     dataFile << "# frame tx ty tz r00 r01 r02 r10 r11 r12 r20 r21 r22\n";
     for (size_t i = 0; i < traj.size(); i++) {
         auto &R = trajR[i];
@@ -237,7 +239,7 @@ int main() {
                  << R(1, 0) << " " << R(1, 1) << " " << R(1, 2) << " "
                  << R(2, 0) << " " << R(2, 1) << " " << R(2, 2) << "\n";
     }
-    std::cout << "Saved trajectory data to ./output/traj_output/trajectory.txt" << std::endl;
+    std::cout << "Saved trajectory data to ./output/2D-2D_results/" + fileName + "/trajectory.txt" << std::endl;
 
     // ─── Draw 2D trajectory with orientation markers ────────────────────────
     if (traj.size() < 2) {
@@ -293,11 +295,10 @@ int main() {
         int px = static_cast<int>(traj[i].x * scale + cxPlot);
         int py = static_cast<int>(traj[i].z * scale + cyPlot);
 
-        // Project camera Z-axis (viewing direction) from 3D to XZ plane
+        // Camera looks along +Z in cam space; in world: R^T * (0,0,1) = third row of R
         cv::Matx33d R = trajR[i];
-        // Camera looks along +Z in cam space; in world: R * (0,0,1)
-        double dx = R(0, 0) * 0 + R(0, 1) * 0 + R(0, 2) * 1;
-        double dy = R(2, 0) * 0 + R(2, 1) * 0 + R(2, 2) * 1;  // Z component in world XZ plane
+        double dx = R(2, 0);  // X component of camera Z-axis in world
+        double dy = R(2, 2);  // Z component of camera Z-axis in world
         float angle = atan2(static_cast<float>(dy), static_cast<float>(dx)) * 180.0f / CV_PI;
         drawCameraArrow(trajImg, px, py, angle, 30);
     }
@@ -316,8 +317,8 @@ int main() {
     cv::putText(trajImg, "Arrows = camera viewing direction",
                 cv::Point(10, 25), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(50, 50, 50), 1);
 
-    cv::imwrite("./output/traj_output/trajectory.png", trajImg);
-    std::cout << "Saved 2D trajectory to ./output/traj_output/trajectory.png" << std::endl;
+    cv::imwrite("./output/2D-2D_results/" + fileName + "/trajectory.png", trajImg);
+    std::cout << "Saved 2D trajectory to ./output/2D-2D_results/" + fileName + "/trajectory.png" << std::endl;
 
     return 0;
 }

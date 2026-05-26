@@ -147,5 +147,4 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/TrajectoryCalculator.dir/DependInfo.cmake"
-  "CMakeFiles/TrajectoryViewer.dir/DependInfo.cmake"
   )

@@ -64,7 +64,6 @@ CMAKE_BINARY_DIR = /home/michall/AAAProjects/RGBD/projects/build
 
 # The main recursive "all" target.
 all: CMakeFiles/TrajectoryCalculator.dir/all
-all: CMakeFiles/TrajectoryViewer.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +72,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/TrajectoryCalculator.dir/clean
-clean: CMakeFiles/TrajectoryViewer.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -101,32 +99,6 @@ TrajectoryCalculator: CMakeFiles/TrajectoryCalculator.dir/rule
 CMakeFiles/TrajectoryCalculator.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryCalculator.dir/build.make CMakeFiles/TrajectoryCalculator.dir/clean
 .PHONY : CMakeFiles/TrajectoryCalculator.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/TrajectoryViewer.dir
-
-# All Build rule for target.
-CMakeFiles/TrajectoryViewer.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles --progress-num=3,4 "Built target TrajectoryViewer"
-.PHONY : CMakeFiles/TrajectoryViewer.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/TrajectoryViewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TrajectoryViewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles 0
-.PHONY : CMakeFiles/TrajectoryViewer.dir/rule
-
-# Convenience name for target.
-TrajectoryViewer: CMakeFiles/TrajectoryViewer.dir/rule
-.PHONY : TrajectoryViewer
-
-# clean rule for target.
-CMakeFiles/TrajectoryViewer.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/clean
-.PHONY : CMakeFiles/TrajectoryViewer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
