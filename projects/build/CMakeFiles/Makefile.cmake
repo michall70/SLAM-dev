@@ -146,5 +146,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/MyOrbbecApp.dir/DependInfo.cmake"
+  "CMakeFiles/DepthCalculator.dir/DependInfo.cmake"
+  "CMakeFiles/OrbExtractor.dir/DependInfo.cmake"
   "CMakeFiles/TrajectoryCalculator.dir/DependInfo.cmake"
+  "CMakeFiles/TrajectoryViewer.dir/DependInfo.cmake"
   )

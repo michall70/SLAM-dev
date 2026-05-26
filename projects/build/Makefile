@@ -117,6 +117,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named MyOrbbecApp
+
+# Build rule for target.
+MyOrbbecApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyOrbbecApp
+.PHONY : MyOrbbecApp
+
+# fast build rule for target.
+MyOrbbecApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOrbbecApp.dir/build.make CMakeFiles/MyOrbbecApp.dir/build
+.PHONY : MyOrbbecApp/fast
+
+#=============================================================================
+# Target rules for targets named DepthCalculator
+
+# Build rule for target.
+DepthCalculator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DepthCalculator
+.PHONY : DepthCalculator
+
+# fast build rule for target.
+DepthCalculator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthCalculator.dir/build.make CMakeFiles/DepthCalculator.dir/build
+.PHONY : DepthCalculator/fast
+
+#=============================================================================
+# Target rules for targets named OrbExtractor
+
+# Build rule for target.
+OrbExtractor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OrbExtractor
+.PHONY : OrbExtractor
+
+# fast build rule for target.
+OrbExtractor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/build
+.PHONY : OrbExtractor/fast
+
+#=============================================================================
 # Target rules for targets named TrajectoryCalculator
 
 # Build rule for target.
@@ -128,6 +167,115 @@ TrajectoryCalculator: cmake_check_build_system
 TrajectoryCalculator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryCalculator.dir/build.make CMakeFiles/TrajectoryCalculator.dir/build
 .PHONY : TrajectoryCalculator/fast
+
+#=============================================================================
+# Target rules for targets named TrajectoryViewer
+
+# Build rule for target.
+TrajectoryViewer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TrajectoryViewer
+.PHONY : TrajectoryViewer
+
+# fast build rule for target.
+TrajectoryViewer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/build
+.PHONY : TrajectoryViewer/fast
+
+src/ORB.o: src/ORB.cpp.o
+.PHONY : src/ORB.o
+
+# target to build an object file
+src/ORB.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/src/ORB.cpp.o
+.PHONY : src/ORB.cpp.o
+
+src/ORB.i: src/ORB.cpp.i
+.PHONY : src/ORB.i
+
+# target to preprocess a source file
+src/ORB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/src/ORB.cpp.i
+.PHONY : src/ORB.cpp.i
+
+src/ORB.s: src/ORB.cpp.s
+.PHONY : src/ORB.s
+
+# target to generate assembly for a file
+src/ORB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrbExtractor.dir/build.make CMakeFiles/OrbExtractor.dir/src/ORB.cpp.s
+.PHONY : src/ORB.cpp.s
+
+src/depth.o: src/depth.cpp.o
+.PHONY : src/depth.o
+
+# target to build an object file
+src/depth.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthCalculator.dir/build.make CMakeFiles/DepthCalculator.dir/src/depth.cpp.o
+.PHONY : src/depth.cpp.o
+
+src/depth.i: src/depth.cpp.i
+.PHONY : src/depth.i
+
+# target to preprocess a source file
+src/depth.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthCalculator.dir/build.make CMakeFiles/DepthCalculator.dir/src/depth.cpp.i
+.PHONY : src/depth.cpp.i
+
+src/depth.s: src/depth.cpp.s
+.PHONY : src/depth.s
+
+# target to generate assembly for a file
+src/depth.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthCalculator.dir/build.make CMakeFiles/DepthCalculator.dir/src/depth.cpp.s
+.PHONY : src/depth.cpp.s
+
+src/extract.o: src/extract.cpp.o
+.PHONY : src/extract.o
+
+# target to build an object file
+src/extract.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOrbbecApp.dir/build.make CMakeFiles/MyOrbbecApp.dir/src/extract.cpp.o
+.PHONY : src/extract.cpp.o
+
+src/extract.i: src/extract.cpp.i
+.PHONY : src/extract.i
+
+# target to preprocess a source file
+src/extract.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOrbbecApp.dir/build.make CMakeFiles/MyOrbbecApp.dir/src/extract.cpp.i
+.PHONY : src/extract.cpp.i
+
+src/extract.s: src/extract.cpp.s
+.PHONY : src/extract.s
+
+# target to generate assembly for a file
+src/extract.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyOrbbecApp.dir/build.make CMakeFiles/MyOrbbecApp.dir/src/extract.cpp.s
+.PHONY : src/extract.cpp.s
+
+src/plotTrajectory.o: src/plotTrajectory.cpp.o
+.PHONY : src/plotTrajectory.o
+
+# target to build an object file
+src/plotTrajectory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.o
+.PHONY : src/plotTrajectory.cpp.o
+
+src/plotTrajectory.i: src/plotTrajectory.cpp.i
+.PHONY : src/plotTrajectory.i
+
+# target to preprocess a source file
+src/plotTrajectory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.i
+.PHONY : src/plotTrajectory.cpp.i
+
+src/plotTrajectory.s: src/plotTrajectory.cpp.s
+.PHONY : src/plotTrajectory.s
+
+# target to generate assembly for a file
+src/plotTrajectory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrajectoryViewer.dir/build.make CMakeFiles/TrajectoryViewer.dir/src/plotTrajectory.cpp.s
+.PHONY : src/plotTrajectory.cpp.s
 
 src/trajectory.o: src/trajectory.cpp.o
 .PHONY : src/trajectory.o
@@ -161,7 +309,23 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... DepthCalculator"
+	@echo "... MyOrbbecApp"
+	@echo "... OrbExtractor"
 	@echo "... TrajectoryCalculator"
+	@echo "... TrajectoryViewer"
+	@echo "... src/ORB.o"
+	@echo "... src/ORB.i"
+	@echo "... src/ORB.s"
+	@echo "... src/depth.o"
+	@echo "... src/depth.i"
+	@echo "... src/depth.s"
+	@echo "... src/extract.o"
+	@echo "... src/extract.i"
+	@echo "... src/extract.s"
+	@echo "... src/plotTrajectory.o"
+	@echo "... src/plotTrajectory.i"
+	@echo "... src/plotTrajectory.s"
 	@echo "... src/trajectory.o"
 	@echo "... src/trajectory.i"
 	@echo "... src/trajectory.s"

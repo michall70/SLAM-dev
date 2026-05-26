@@ -1,3 +1,7 @@
+/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/MyOrbbecApp.dir
+/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/DepthCalculator.dir
+/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/OrbExtractor.dir
 /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/TrajectoryCalculator.dir
+/home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/TrajectoryViewer.dir
 /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/edit_cache.dir
 /home/michall/AAAProjects/RGBD/projects/build/CMakeFiles/rebuild_cache.dir
